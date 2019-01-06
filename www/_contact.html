@@ -1,0 +1,52 @@
+{{#section site_setting label='Site Settings'}}
+<div class="light-bg py-5" id="contact">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 text-center text-lg-left">
+        <p class="mb-2">
+          <span class="ti-location-pin mr-2"></span>
+          {{address}}
+        </p>
+        <div class=" d-block d-sm-inline-block">
+          <p class="mb-2">
+            <span class="ti-email mr-2"></span>
+            <a class="mr-4" href="mailto:{{contact_email}}">
+              {{contact_email}}
+            </a>
+          </p>
+        </div>
+
+      </div>
+      <!-- ./col-lg-6 -->
+      {{#if fb_link || tw_link || ig_link}}
+      <div class="col-lg-6">
+        <div class="social-icons">
+          {{#if fb_link}}
+          <a href="{{fb_link type=link label='Facebook' required=false}}"
+             target="_blank">
+            <span class="ti-facebook"></span>
+          </a>
+          {{/if}}
+
+          {{#if tw_link}}
+          <a href="{{tw_link type=link label='Twitter' required=false}}" target="_blank">
+            <span class="ti-twitter-alt"></span>
+          </a>
+          {{/if}}
+
+          {{#if ig_link}}
+          <a href="{{ig_link type=link label='Instagram' required=false}}" target="_blank">
+            <span class="ti-instagram"></span>
+          </a>
+          {{/if}}
+        </div>
+      </div>
+      <!-- ./col-lg-6 -->
+      {{/if}}
+    </div>
+    <!-- ./row -->
+  </div>
+  <!-- ./container -->
+</div>
+<!-- ./#contact -->
+{{/section}}

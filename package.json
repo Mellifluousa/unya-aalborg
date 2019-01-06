@@ -1,0 +1,10 @@
+{
+  "name": "project2030",
+  "vapid": {},
+  "scripts": {
+    "start": "vapid start ."
+  },
+  "dependencies": {
+    "vapid-cli": "l0gicpath/vapid#master"
+  }
+}

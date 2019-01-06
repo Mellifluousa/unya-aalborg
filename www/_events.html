@@ -1,0 +1,60 @@
+<div class="section dark-bg" id="events">
+  <div class="container">
+    <div class="section-title">
+      <h3>Our Events</h3>
+    </div>
+    <!-- ./section-title -->
+
+    <div class="row">
+      {{#section events sortable=true}}
+      <div class="col-12 col-lg-4 mt-4 ">
+        <div class="card features">
+          {{#if ended}}
+          <div class="ribbon-wrapper">
+            <div class="ribbon">ENDED</div>
+          </div>
+          {{/if}}
+          <div class="card-body">
+            <div class="media">
+              <div class="media-body">
+                <h4 class="card-title">
+                  <a href="{{event_link type=link}}">
+                    {{event_title label='Event Name'}}
+                  </a>
+                </h4>
+                <a href="{{event_link type=link}}" class="card-image">
+                  <img src="{{event_image label='Image' type=image tag=false}}"
+                       height="187"
+                       width="315">
+                  <i class="card-image-icon ti-link"></i>
+                </a>
+                <div class="card-text" style="padding-top: 0.5rem;">
+                  {{event_description label='Description' type=html}}
+                  <p>
+                    <b>{{event_date type=date format='%a %d. %b %Y'}}</b>
+                    <b>{{event_time_start label='Starting hour'}} - {{event_time_end label='Ending hour'}}</b>
+                  </p>
+                </div>
+                <!-- <p class="card-text" style="padding-top: 0.5rem;">
+                     An experience designed to help you understand the current pressing issues
+                     our world faces, and to give you the tools to become part of the solution. <br/>
+                     <b>Date &amp; Venue: To be announced</b>
+                     </p> -->
+              </div>
+              <!-- ./media-body -->
+            </div>
+            <!-- ./media -->
+          </div>
+          <!-- ./card-body -->
+        </div>
+        <!-- ./card -->
+      </div>
+      <!-- {{ended type=choice input=toggle label="Event Concluded?"}} -->
+      <!-- ./col-12 -->
+      {{/section}}
+
+    </div>
+    <!-- ./row -->
+  </div>
+  <!-- ./container -->
+</div>
