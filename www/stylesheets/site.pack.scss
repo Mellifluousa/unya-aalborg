@@ -1,8 +1,12 @@
 $blue: #081676;
 $blue-1: #233687;
 $blue-2: #2e468f;
+$blue-3: #5c75c0;
 $blueish-green: #9fded7;
 $whitewashed-blue: #d0e6ef;
+$whitewashed-grey: #e9ebec;
+$whitewashed-grey-2: #eceeef;
+$light-teal: #85a9bd;
 $green: #00FAC0;
 $white: #ffffff;
 $whit-1: #f6f8fb;
@@ -18,6 +22,7 @@ $hero-color: $white;
 $hero-tagline-color: $white;
 
 $headers-color: $blue-2;
+$subheaders-color: $blue-3;
 
 html, body {
   height: 100%;
@@ -42,6 +47,33 @@ a {
 h1 {
   font-size: 50px;
   color: $white;
+}
+
+p.lead {
+  color: $subheaders-color;
+}
+
+.btn-primary {
+  border-radius: 3px;
+  background-image: -moz-linear-gradient( 122deg, $blue-1 0%, $blue-2 100%);
+  background-image: -webkit-linear-gradient( 122deg, $blue-1 0%, $blue-2 100%);
+  background-image: -ms-linear-gradient( 122deg, $blue-1 0%, $blue-2 100%);
+  background-image: linear-gradient( 122deg, $blue-1 0%, $blue-2 100%);
+  box-shadow: 0px 9px 32px 0px rgba(0, 0, 0, 0.2);
+  font-weight: 500;
+  padding: 0.6rem 2rem;
+  border: 0;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary:not([disabled]):not(.disabled).active,
+.btn-primary:not([disabled]):not(.disabled):active,
+.show>.btn-primary.dropdown-toggle {
+  background-image: linear-gradient( 122deg, $blue-2 0%, $blueish-green 100%);
+  box-shadow: 0px 9px 32px 0px rgba(0, 0, 0, 0.3);
+  color: #FFF;
 }
 
 header {
@@ -108,6 +140,23 @@ header {
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.nav-tabs .nav-item .nav-link,
+.nav-tabs .nav-link:focus,
+.nav-tabs .nav-link:hover {
+  padding: 1rem 1rem;
+  border-color: $whitewashed-grey $whitewashed-grey #FFF;
+  font-size: 19px;
+  color: $light-teal;
+  background: $whitewashed-grey-2;
+}
+
+.nav-tabs .nav-link.active {
+  background: #FFF;
+  border-top-width: 3px;
+  border-color: $blueish-green #faf6fb #FFF;
+  color: $blue;
 }
 
 .card.features:before {
