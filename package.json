@@ -2,9 +2,9 @@
   "name": "project2030",
   "vapid": {},
   "scripts": {
-    "start": "vapid start ."
+    "start": "$(npm bin)/vapid start ."
   },
   "dependencies": {
-    "vapid-cli": "l0gicpath/vapid#master"
+    "@vapid/cli": "l0gicpath/vapid#master"
   }
 }
