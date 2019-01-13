@@ -70,5 +70,25 @@ class TxtType {
     }`;
 
     $("body").append(css)
+
+    const $joinBtn = $("#btn-joinnow");
+    const formLink = $joinBtn.data('form-link');
+
+    if (formLink) {
+      const reference = typeformEmbed.makePopup(
+        formLink,
+        {
+          mode: 'popup',
+          hideHeaders: false,
+          hideFooters: false
+        }
+      );
+
+
+      $joinBtn.on("click", function(event) {
+        event.preventDefault();
+        reference.open();
+      });
+    }
   })
 })(jQuery);
